@@ -1,0 +1,160 @@
+/* Ngjyrat dhe rregullat e përgjithshme */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Shina e njoftimeve */
+.shina-njoftime {
+    background-color: #d32f2f; /* E kuqe e mbyllur për rëndësi */
+    color: white;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+/* Navigacioni Serioz */
+.navbar {
+    background-color: #1a2a6c;
+    padding: 15px 0;
+    position: static;
+    top: 0;
+    z-index: 1000;
+    border: none;
+}
+
+.navbar-custom {
+    background-color: #1a2a6c; /* Blu e errët */
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.navbar-custom .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ffffff !important;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 14px;
+    transition: 0.3s;
+}
+
+.navbar-custom .navbar-nav li a:hover {
+    background-color: #243b55;
+}
+.navbar-custom .navbar-toggle {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .navbar-custom .navbar-collapse {
+        background-color: #1a2a6c;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .navbar-custom .navbar-nav {
+        display: block;
+    }
+    .navbar-custom .navbar-nav li {
+        display: block;
+        width: 100%;
+    }
+    .navbar-custom .navbar-nav li a {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .navbar-custom .navbar-nav li a:hover,
+    .navbar-custom .navbar-nav li a:focus {
+        background-color: rgba(255,255,255,0.08);
+    }
+    .navbar-custom .navbar-toggle {
+        display: block;
+        border-color: rgba(255,255,255,0.25);
+    }
+    .navbar-custom .navbar-toggle .icon-bar {
+        background-color: #ffffff;
+    }
+}
+/* Pjesa Hero (Kryesore) */
+.hero-section {
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    max-height: 650px;
+}
+
+.btn-serioz {
+    background-color: #ffffff;
+    color: #1a2a6c;
+    font-weight: bold;
+    border-radius: 0;
+    padding: 10px 25px;
+    margin-top: 20px;
+}
+
+.btn-serioz:hover {
+    background-color: #e0e0e0;
+}
+
+/* Seksioni i informacionit */
+.seksion-informacion {
+    max-width: 1000px;
+    margin: 20px auto 50px;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.seksion-informacion h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.seksion-informacion p {
+    line-height: 1.7;
+    color: #333;
+}
+
+.panel-lajme {
+    background-color: white;
+    padding: 20px;
+    border-left: 5px solid #1a2a6c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer-serioz {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+.footer-serioz a {
+    color: #ffffff;
+}

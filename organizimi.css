@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: #f4f7fc;
+}
+
+/* HEADER */
+
+header{
+    background: #003b8e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* CONTAINER */
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+/* CARD */
+
+.card{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card a{
+    display: block;
+    padding: 35px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #003b8e;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card a:hover{
+    background: #003b8e;
+    color: white;
+}
+
+/* BUTTON */
+
+.back-home{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.back-home a{
+    background: #003b8e;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.back-home a:hover{
+    background: #001f4d;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size: 24px;
+    }
+
+    .card a{
+        font-size: 18px;
+        padding: 30px 15px;
+    }
+}
