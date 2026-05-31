@@ -1,44 +1,70 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var form = document.getElementById('contact-form');
-    var feedback = document.getElementById('contact-feedback');
+// Inicializo EmailJS
+(function () {
+    emailjs.init({
+        publicKey: "07bcM3DkpbMA54nv2"
+    });
+})();
 
-    if (!form || !feedback) {
+// Prit derisa faqja të ngarkohet
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("status");
+
+    if (!form) {
+        console.error("Formulari contact-form nuk u gjet!");
         return;
     }
 
-    form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-            feedback.innerHTML = '<div class="alert alert-danger">Ju lutem plotësoni të gjitha fushat e detyrueshme para dërgimit.</div>';
-            form.classList.add('was-validated');
-            return;
-        }
+    form.addEventListener("submit", function (e) {
 
-        event.preventDefault();
+        e.preventDefault();
 
-        var name = encodeURIComponent(document.getElementById('name').value.trim());
-        var email = encodeURIComponent(document.getElementById('email').value.trim());
-        var message = encodeURIComponent(document.getElementById('message').value.trim());
-        var subject = encodeURIComponent('Mesazh nga kontakti i Gjimnazit Milot');
-        var body = encodeURIComponent('Emri: ' + name + '\nEmail: ' + email + '\n\nMesazhi:\n' + message);
+        const btn = form.querySelector("button[type='submit']");
 
-        var mailtoLink = 'mailto:milotgjimnazi@yahoo.com?subject=' + subject + '&body=' + body;
-     
+        btn.disabled = true;
+        btn.innerText = "Po dërgohet...";
 
-        feedback.innerHTML = '<div class="alert alert-success">Emaili juaj po hapet në klientin tuaj të postës. Faleminderit që na kontaktuat.</div>';
-        form.reset();
+        status.innerHTML = "";
 
-        var submitButton = form.querySelector('button[type="submit"]');
-        if (submitButton) {
-            submitButton.disabled = false;
-            submitButton.textContent = 'Dërgo';
-        }
+        const params = {
+            from_name: document.getElementById("name").value,
+            from_email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        };
+
+        emailjs.send(
+            "service_h5g8u7p",
+            "template_7zae227",
+            params
+        )
+        .then(function (response) {
+
+            console.log("SUCCESS!", response.status, response.text);
+
+            status.innerHTML =
+                '<div class="alert alert-success">' +
+                'Mesazhi u dërgua me sukses!' +
+                '</div>';
+
+            form.reset();
+
+            btn.disabled = false;
+            btn.innerText = "Dërgo";
+        })
+        .catch(function (error) {
+
+            console.error("FAILED...", error);
+
+            status.innerHTML =
+                '<div class="alert alert-danger">' +
+                'Gabim gjatë dërgimit të emailit.' +
+                '</div>';
+
+            btn.disabled = false;
+            btn.innerText = "Dërgo";
+        });
+
     });
 
-    form.addEventListener('input', function () {
-        if (feedback.innerHTML.trim() !== '') {
-            feedback.innerHTML = '';
-        }
-    });
 });
