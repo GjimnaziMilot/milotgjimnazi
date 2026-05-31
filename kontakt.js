@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var body = encodeURIComponent('Emri: ' + name + '\nEmail: ' + email + '\n\nMesazhi:\n' + message);
 
         var mailtoLink = 'mailto:milotgjimnazi@yahoo.com?subject=' + subject + '&body=' + body;
-        window.location.href = mailtoLink;
+     
 
         feedback.innerHTML = '<div class="alert alert-success">Emaili juaj po hapet në klientin tuaj të postës. Faleminderit që na kontaktuat.</div>';
         form.reset();
