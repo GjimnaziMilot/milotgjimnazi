@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Gjimnazi Milot</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="gjimnazimilot.css">
+    <link rel="stylesheet" href="kontakt.css">
+</head>
+<body>
+
+<nav class="navbar navbar-custom">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar" style="background-color:white;"></span>
+                <span class="icon-bar" style="background-color:white;"></span>
+                <span class="icon-bar" style="background-color:white;"></span>
+            </button>
+            <a class="navbar-brand" href="GjimnaziMilot.html">Gjimnazi Milot</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="njof.html">Njoftime</a></li>
+                <li><a href="matura.html">Matura Shtetërore</a></li>
+                <li><a href="Organizimi.html">Organizimi i Shkollës</a></li>
+                <li><a href="aktivitete.html">Aktivitete</a></li>
+                <li class="active"><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container seksion-informacion" style="margin-top:40px;">
+
+    <h1>Kontakt</h1>
+
+    <form action="https://formsubmit.co/milotgjimnazi@yahoo.com" method="POST">
+
+        <input type="hidden" name="_subject" value="Mesazh nga faqja e Gjimnazit Milot">
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="hidden" name="_next" value="https://faqjajote.com/faleminderit.html">
+
+        <div class="form-group">
+            <label for="name">Emri:</label>
+            <input type="text"
+                   class="form-control"
+                   id="name"
+                   name="Emri"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email"
+                   class="form-control"
+                   id="email"
+                   name="Email"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Mesazhi:</label>
+            <textarea class="form-control"
+                      id="message"
+                      name="Mesazhi"
+                      rows="5"
+                      required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Dërgo
+        </button>
+
+    </form>
+
+    <a href="GjimnaziMilot.html"
+       class="btn btn-danger"
+       style="margin-top:20px; display:inline-block;">
+        Kthehu në faqen kryesore
+    </a>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
